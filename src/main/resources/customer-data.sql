@@ -1,0 +1,2 @@
+insert into car (make, model, bodyType, gearbox, fuelType) values ('Toyota', 'Avensis', 'Saloon', 'Automatic', 'Petrol');
+insert into car (make, model, bodyType, gearbox, fuelType) values ('Lexus', 'IS250', 'Saloon', 'Automatic', 'Petrol');
