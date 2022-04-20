@@ -1,11 +1,30 @@
 package com.qa.springproject.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Car {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(nullable = false)
 	private String make;
+	
+	@Column(nullable = false)
 	private String model;
+	
+	@Column(nullable = false)
 	private String bodyType;
+	
+	@Column(nullable = false)
 	private String gearbox;
+	
+	@Column(nullable = false)
 	private String fuelType;
 	
 	public Car(Integer id, String make, String model, String bodyType, String gearbox, String fuelType) {
