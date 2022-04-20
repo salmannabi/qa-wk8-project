@@ -1,39 +1,60 @@
 package com.qa.springproject.service;
 
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.qa.springproject.domain.Car;
+import com.qa.springproject.repo.CarRepo;
 
+@Service
 public class CarService implements ServiceIF<Car> {
+	
+	private CarRepo repo;
+	
+	@Autowired
+	public CarService(CarRepo repo) {
+		super();
+		this.repo = repo;
+	}
 
 	@Override
 	public Car create(Car car) {
-		// TODO Auto-generated method stub
-		return null;
+		Car newCar = this.repo.save(car);
+		return newCar;
 	}
 
 	@Override
 	public List<Car> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.repo.findAll();
 	}
 
 	@Override
 	public Car getOne(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Car> data = this.repo.findById(id);
+		return data.get();
 	}
 
 	@Override
 	public Car replace(Integer id, Car car) {
-		// TODO Auto-generated method stub
-		return null;
+		Car currentCar = this.repo.findById(id).get();
+		
+		currentCar.setMake(car.getMake());
+		currentCar.setModel(car.getModel());
+		currentCar.setGearbox(car.getGearbox());
+		currentCar.setFuelType(car.getFuelType());
+		currentCar.setBodyType(car.getBodyType());
+		
+		Car updated = this.repo.save(currentCar);
+		return updated;
 	}
 
 	@Override
-	public void remove(Integer id) {
-		// TODO Auto-generated method stub
-		
+	public void remove(@PathVariable Integer id) {
+		this.repo.deleteById(id);		
 	}
 
 }
