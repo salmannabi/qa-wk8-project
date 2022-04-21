@@ -53,7 +53,6 @@ public class CarControllerIntegrationTest {
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
 	
-
 	@Test
 	void getAllTest() throws Exception {
 		RequestBuilder req = get("/getAll");
@@ -79,6 +78,28 @@ public class CarControllerIntegrationTest {
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
 	
+	@Test
+	void testReplace() throws Exception {
+		
+		Car testCar = new Car(1, "Lexus", "IS250", "Saloon", "Manual", "Petrol");
+		String json = this.mapper.writeValueAsString(testCar);
+		
+		RequestBuilder req = put("/replace/1").contentType(MediaType.APPLICATION_JSON).content(json);
+		
+		Car testUpdatedCar = new Car(1, "Lexus", "IS250", "Saloon", "Manual", "Petrol");
+		String testUpdatedCarAsJson = this.mapper.writeValueAsString(testUpdatedCar);
+		
+		ResultMatcher checkStatus = status().isAccepted();
+		ResultMatcher checkBody = content().json(testUpdatedCarAsJson);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void testRemove() throws Exception {
+		this.mvc.perform(delete("/remove/1")).andExpect(status().isNoContent());
+	}
+
 	@Test
 	void getByMakeTest() throws Exception {
 		RequestBuilder req = get("/getByMake/Lexus");
@@ -107,24 +128,44 @@ public class CarControllerIntegrationTest {
 	}
 	
 	@Test
-	void testReplace() throws Exception {
+	void getByBodyTypeTest() throws Exception {
+		RequestBuilder req = get("/getByBodyType/Saloon");
 		
-		Car testCar = new Car(1, "Lexus", "IS250", "Saloon", "Manual", "Petrol");
-		String json = this.mapper.writeValueAsString(testCar);
+		List<Car> testCars = List.of(new Car(1, "Toyota", "Avensis", "Saloon", "Automatic", "Petrol"), 
+				new Car(2, "Lexus", "IS250", "Saloon", "Automatic", "Petrol"));
+		String json = this.mapper.writeValueAsString(testCars);
 		
-		RequestBuilder req = put("/replace/1").contentType(MediaType.APPLICATION_JSON).content(json);
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
 		
-		Car testUpdatedCar = new Car(1, "Lexus", "IS250", "Saloon", "Manual", "Petrol");
-		String testUpdatedCarAsJson = this.mapper.writeValueAsString(testUpdatedCar);
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+
+	@Test
+	void getByFuelTypeTest() throws Exception {
+		RequestBuilder req = get("/getByFuelType/Petrol");
 		
-		ResultMatcher checkStatus = status().isAccepted();
-		ResultMatcher checkBody = content().json(testUpdatedCarAsJson);
+		List<Car> testCars = List.of(new Car(1, "Toyota", "Avensis", "Saloon", "Automatic", "Petrol"), 
+				new Car(2, "Lexus", "IS250", "Saloon", "Automatic", "Petrol"));
+		String json = this.mapper.writeValueAsString(testCars);
+		
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
 		
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
 	
 	@Test
-	void testRemove() throws Exception {
-		this.mvc.perform(delete("/remove/1")).andExpect(status().isNoContent());
+	void getByGearboxTest() throws Exception {
+		RequestBuilder req = get("/getByGearbox/Automatic");
+		
+		List<Car> testCars = List.of(new Car(1, "Toyota", "Avensis", "Saloon", "Automatic", "Petrol"), 
+				new Car(2, "Lexus", "IS250", "Saloon", "Automatic", "Petrol"));
+		String json = this.mapper.writeValueAsString(testCars);
+		
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
 }
