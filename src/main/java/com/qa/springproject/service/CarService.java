@@ -57,4 +57,28 @@ public class CarService implements ServiceIF<Car> {
 		this.repo.deleteById(id);		
 	}
 
+	public List<Car> getCarsByMake(String make) {
+		List<Car> data = this.repo.findByMakeIgnoreCase(make);
+		return data;
+	}
+	
+	public List<Car> getCarsByModel(String model) {
+		List<Car> data = this.repo.findByModelIgnoreCase(model);
+		return data;
+	}
+	
+	public List<Car> getCarsByBodyType(String bodyType) {
+		List<Car> data = this.repo.findByBodyTypeIgnoreCase(bodyType);
+		return data;
+	}
+	
+	public List<Car> getCarsByFuelType(String fuelType) {
+		List<Car> data = this.repo.findByFuelTypeIgnoreCase(fuelType);
+		return data;
+	}
+	
+	public List<Car> getCarsByGearbox(String gearbox) {
+		List<Car> data = this.repo.findByGearboxIgnoreCase(gearbox);
+		return data;
+	}
 }
