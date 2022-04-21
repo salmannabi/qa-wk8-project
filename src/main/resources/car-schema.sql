@@ -1,8 +1,10 @@
-drop schema springproject;
+-- drop schema springproject;
 
-CREATE SCHEMA IF NOT EXISTS springproject;
+-- CREATE SCHEMA IF NOT EXISTS springproject;
 
-USE springproject ;
+-- USE springproject ;
+
+drop table if exists car CASCADE;
 
 create table car(
 	id int auto_increment,
