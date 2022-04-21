@@ -57,5 +57,33 @@ public class CarController {
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
+	@GetMapping("/getByMake/{make}")
+	public ResponseEntity<List<Car>> getCarsByMake(@PathVariable String make) {
+		List<Car> data = this.service.getCarsByMake(make);
+		return ResponseEntity.ok(data);
+	}
 	
+	@GetMapping("/getByModel/{model}")
+	public ResponseEntity<List<Car>> getCarsByModel(@PathVariable String model) {
+		List<Car> data = this.service.getCarsByModel(model);
+		return ResponseEntity.ok(data);
+	}
+	
+	@GetMapping("/getByFuelType/{fuelType}")
+	public ResponseEntity<List<Car>> getCarsByFuelType(@PathVariable String fuelType) {
+		List<Car> data = this.service.getCarsByFuelType(fuelType);
+		return ResponseEntity.ok(data);
+	}
+	
+	@GetMapping("/getByBodyType/{bodyType}")
+	public ResponseEntity<List<Car>> getCarsByBodyType(@PathVariable String bodyType) {
+		List<Car> data = this.service.getCarsByBodyType(bodyType);
+		return ResponseEntity.ok(data);
+	}
+	
+	@GetMapping("/getByGearbox/{gearbox}")
+	public ResponseEntity<List<Car>> getCarsByGearbox(@PathVariable String gearbox) {
+		List<Car> data = this.service.getCarsByGearbox(gearbox);
+		return ResponseEntity.ok(data);
+	}
 }
