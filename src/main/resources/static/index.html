@@ -15,8 +15,9 @@
         </div>
         <div class="container-sm px-4">
             <div class="row gx-5">
-                <h1 class="text-center">Welcome to ALLCars Database <br/><br/></h1>
-                <div class="col-6">
+                <h1 class="text-center mb-4">Welcome to ALLCars Database</h1>
+                <hr>
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>Add A New Car To The Database</h4>
                         <input type="text" id="inputMake" class="form-control" placeholder="enter the make of the car" />
@@ -24,92 +25,95 @@
                         <input type="text" id="inputBodyType" class="form-control mt-2" placeholder="enter the body type of the car" />
                         <input type="text" id="inputGearbox" class="form-control mt-2" placeholder="enter the gearbox of the car" />
                         <input type="text" id="inputFuelType" class="form-control mt-2" placeholder="enter the fuel type of the car" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonCreate">Submit</button>
-                        <input type="text" style="display: none;" />
-                    </form>
-                </div>
-    
-                <div class="col-6">
-                    <form class="mb-2">
-                        <h4>List All Cars In The Database</h4>
-                        <button type="button" class="btn btn-primary mt-2" id="buttonReadAll">Print All Cars</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonCreate">Create Entry</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
 
                 <hr>
 
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>List A Single Car By Its Database ID</h4>
                         <input type="number" id="readInputId" class="form-control" placeholder="enter id of the car to display" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonRead">Print</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonRead">View By ID</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
     
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>Delete A Car By Its Database ID</h4>
                         <input type="number" id="deleteInputId" class="form-control" placeholder="enter id of the car to delete" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonDelete">Delete</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonDelete">Delete By ID</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
 
                 <hr>
                 
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>List All Cars By Make Only</h4>
                         <input type="text" id="readInputMake" class="form-control" placeholder="enter make of the car to display" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonReadMake">Print By Make</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadMake">View By Make</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
 
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>List All Cars By Model Only</h4>
                         <input type="text" id="readInputModel" class="form-control" placeholder="enter model of the car to display" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonReadModel">Print By Model</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadModel">View By Model</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
 
                 <hr>
                 
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>List All Cars By Body Type Only</h4>
                         <input type="text" id="readInputBodyType" class="form-control" placeholder="enter body type of the car to display" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonReadBodyType">Print By Body Type</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadBodyType">View By Body Type</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
 
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>List All Cars By Fuel Type Only</h4>
                         <input type="text" id="readInputFuelType" class="form-control" placeholder="enter fuel type of the car to display" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonReadFuelType">Print By Fuel Type</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadFuelType">View By Fuel Type</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
 
                 <hr>
                 
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>List All Cars By Gearbox Only</h4>
                         <input type="text" id="readInputGearbox" class="form-control" placeholder="enter gearbox type of the car to display" />
-                        <button type="button" class="btn btn-primary mt-2" id="buttonReadGearbox">Print By Gearbox</button>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadGearbox">View By Gearbox</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
-                <div class="col-6">
+
+                <div class="col-6 mb-3">
                     <form class="mb-2">
-                        <h4>placeholder to be removed</h4>
+                        <h4>List All Cars In The Database</h4>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadAll">View All Cars</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <hr>
+
+                <div>
+                    <form class="mb-2">
+                        <h4 class="text-center">Displayed Result</h4>
                         <ul id="listOutput"></ul>
                     </form>
                 </div>

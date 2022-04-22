@@ -7,7 +7,10 @@ import * as DOM from './dom.js';
 const writeItem = item => {
   const child = document.createElement(`li`);
   child.id = item.id;
-  child.innerHTML = `${JSON.stringify(item)}`;
+
+  let str = `Id: ${item.id}, Make: ${item.make}, Model: ${item.model}, Body Type: ${item.bodyType}, 
+            Gearbox: ${item.gearbox}, Fuel Type: ${item.fuelType}`;
+  child.innerHTML = str;
   DOM.listOutput.appendChild(child);
 }
 
