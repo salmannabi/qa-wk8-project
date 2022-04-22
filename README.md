@@ -68,31 +68,31 @@ These are the different stages of the project development in screenshots
 <img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/jira-initial-screensnap.png">
 
 ### Project Risk Assessment
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/risk_assessment_pdf_screenshot.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/risk_assessment_pdf_screenshot.png">
 
 ### Risk Assessment Matrix
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/risk_assessment_matrix.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/risk_assessment_matrix.png">
 
 ### Acceptance Criteria Added
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/added_acceptance_criteria.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/added_acceptance_criteria.png">
 
 ### Car Table ERD Diagram
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/car_table_erd_diagram.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/car_table_erd_diagram.png">
 
 ### H2 and Prod Database Properties Added
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/h2_and_prod_database_implemented.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/h2_and_prod_database_implemented.png">
 
 ### Manual Test Using Postman
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/api_testing_via_postman.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/api_testing_via_postman.png">
 
 ### Additional Functionality Added To The Repository
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/extra_data_retrieval_functionality_added.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/extra_data_retrieval_functionality_added.png">
 
 ### Front-End index.html Incomplete Stage
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/index_file_access_view.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/index_file_access_view.png">
 
 ### Test Coverage At 71.7%
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/test_coverage_at_71.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/test_coverage_at_71.png">
 
 ### Test Coverage At 86.5%
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/test_coverage_reached_86.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/test_coverage_reached_86.png">
