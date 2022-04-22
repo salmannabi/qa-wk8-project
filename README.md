@@ -65,7 +65,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 These are the different stages of the project development in screenshots
 
 ### Initial Jira Board
-https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/jira-initial-screensnap.png
+<img src="https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/jira-initial-screensnap.png">
 
 ### Project Risk Assessment
 https://github.com/salmannabi/qa-wk8-project/blob/main/documentation/risk_assessment_pdf_screenshot.png
