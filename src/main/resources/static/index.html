@@ -20,12 +20,26 @@
                 <div class="col-6 mb-3">
                     <form class="mb-2">
                         <h4>Add A New Car To The Database</h4>
-                        <input type="text" id="inputMake" class="form-control" placeholder="enter the make of the car" />
+                        <input type="text" id="inputMake" class="form-control mt-2" placeholder="enter the make of the car" />
                         <input type="text" id="inputModel" class="form-control mt-2" placeholder="enter the model of the car" />
                         <input type="text" id="inputBodyType" class="form-control mt-2" placeholder="enter the body type of the car" />
                         <input type="text" id="inputGearbox" class="form-control mt-2" placeholder="enter the gearbox of the car" />
                         <input type="text" id="inputFuelType" class="form-control mt-2" placeholder="enter the fuel type of the car" />
                         <button type="button" class="btn btn-primary mt-2" id="buttonCreate">Create Entry</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>Update An Existing Car Entry</h4>
+                        <input type="number" id="updateInputId" class="form-control" placeholder="enter id of the car to update" />
+                        <input type="text" id="updateMake" class="form-control mt-2" placeholder="enter the make of the car" />
+                        <input type="text" id="updateModel" class="form-control mt-2" placeholder="enter the model of the car" />
+                        <input type="text" id="updateBodyType" class="form-control mt-2" placeholder="enter the body type of the car" />
+                        <input type="text" id="updateGearbox" class="form-control mt-2" placeholder="enter the gearbox of the car" />
+                        <input type="text" id="updateFuelType" class="form-control mt-2" placeholder="enter the fuel type of the car" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonUpdate">Update Entry</button>
                         <input type="text" style="display: none;" />
                     </form>
                 </div>
