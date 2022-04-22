@@ -173,21 +173,51 @@ const del = () => {
 
 // POST function
 const post = () => {
-  axios.post(`/create`, {   make : DOM.inputMake.value,
+
+  DOM.listOutput.innerHTML = ``;
+  const child = document.createElement(`li`);
+
+  axios.post(`http://localhost:8080/create`, {   make : DOM.inputMake.value,
                             model : DOM.inputModel.value, 
                             bodyType : DOM.inputBodyType.value,
                             gearbox : DOM.inputGearbox.value,
                             fuelType : DOM.inputFuelType.value})
     .then((response) => {
       console.log(response);
-      get();
+      child.innerHTML = `New car entry has been added to the database!`;
     }).catch((err) => {
+      child.innerHTML = `Unable to add new car to the database!`;
       console.log(err);
     });
+
+    DOM.listOutput.appendChild(child);
+}
+
+const put = () => {
+  let id = DOM.updateInputId.value;
+
+  DOM.listOutput.innerHTML = ``;
+  const child = document.createElement(`li`);
+
+  axios.put(`http://localhost:8080/replace/${id}`, {   make : DOM.updateMake.value,
+                            model : DOM.updateModel.value, 
+                            bodyType : DOM.updateBodyType.value,
+                            gearbox : DOM.updateGearbox.value,
+                            fuelType : DOM.updateFuelType.value})
+    .then((response) => {
+      console.log(response);
+      child.innerHTML = `Car with id: ${id} has been updated!`;
+    }).catch((err) => {
+      child.innerHTML = `Unable to update the car with id: ${id}`;
+      console.log(err);
+    });
+
+    DOM.listOutput.appendChild(child);
 }
 
 // Setting up the buttons' on click events
 DOM.buttonCreate.onclick = () => post();
+DOM.buttonUpdate.onclick = () => put();
 DOM.buttonRead.onclick = () => getSingle();
 DOM.buttonDelete.onclick = () => del();
 DOM.buttonReadAll.onclick = () => get();
