@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring API Front-End</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <body>
+        <div>
+            <img class="img-fluid" src="./images/cars_stock.jpg" alt="Cars Stock Photo">
+        </div>
+        <div class="container-sm px-4">
+            <div class="row gx-5">
+                <h1 class="text-center mb-4">Welcome to ALLCars Database</h1>
+                <hr>
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>Add A New Car To The Database</h4>
+                        <input type="text" id="inputMake" class="form-control" placeholder="enter the make of the car" />
+                        <input type="text" id="inputModel" class="form-control mt-2" placeholder="enter the model of the car" />
+                        <input type="text" id="inputBodyType" class="form-control mt-2" placeholder="enter the body type of the car" />
+                        <input type="text" id="inputGearbox" class="form-control mt-2" placeholder="enter the gearbox of the car" />
+                        <input type="text" id="inputFuelType" class="form-control mt-2" placeholder="enter the fuel type of the car" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonCreate">Create Entry</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <hr>
+
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List A Single Car By Its Database ID</h4>
+                        <input type="number" id="readInputId" class="form-control" placeholder="enter id of the car to display" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonRead">View By ID</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+    
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>Delete A Car By Its Database ID</h4>
+                        <input type="number" id="deleteInputId" class="form-control" placeholder="enter id of the car to delete" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonDelete">Delete By ID</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <hr>
+                
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List All Cars By Make Only</h4>
+                        <input type="text" id="readInputMake" class="form-control" placeholder="enter make of the car to display" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadMake">View By Make</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List All Cars By Model Only</h4>
+                        <input type="text" id="readInputModel" class="form-control" placeholder="enter model of the car to display" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadModel">View By Model</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <hr>
+                
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List All Cars By Body Type Only</h4>
+                        <input type="text" id="readInputBodyType" class="form-control" placeholder="enter body type of the car to display" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadBodyType">View By Body Type</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List All Cars By Fuel Type Only</h4>
+                        <input type="text" id="readInputFuelType" class="form-control" placeholder="enter fuel type of the car to display" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadFuelType">View By Fuel Type</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <hr>
+                
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List All Cars By Gearbox Only</h4>
+                        <input type="text" id="readInputGearbox" class="form-control" placeholder="enter gearbox type of the car to display" />
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadGearbox">View By Gearbox</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <form class="mb-2">
+                        <h4>List All Cars In The Database</h4>
+                        <button type="button" class="btn btn-primary mt-2" id="buttonReadAll">View All Cars</button>
+                        <input type="text" style="display: none;" />
+                    </form>
+                </div>
+
+                <hr>
+
+                <div>
+                    <form class="mb-2">
+                        <h4 class="text-center">Displayed Result</h4>
+                        <ul id="listOutput"></ul>
+                    </form>
+                </div>
+            </div>
+    
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script type="module" src="./scripts/script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+        </div>
+</body>
+</html>
